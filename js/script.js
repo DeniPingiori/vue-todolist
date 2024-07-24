@@ -28,7 +28,10 @@ createApp({
         }
     },
     methods:{
-        deleteTask(index){
+        deleteTask(index) {
+            if(confirm('Sei sicuro di voler cancellare questo task?')){
+                
+            }
           this.tasks.splice(index, 1);  
         }
     }
