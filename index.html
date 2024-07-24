@@ -29,10 +29,10 @@
                             <div class="top-container">
                                 <h2 class="text-center">Tasks</h2>
                                 <ul class="list-unstyled">
-                                    <li>
+                                    <li v-for="task, index in tasks">
                                         <div class="d-flex justify-content-between ">
-                                            <div class="text">
-                                                Lorem Ipsum
+                                            <div class="text" :class="task.done == true ? 'text-decoration-line-through' : '' ">
+                                               {{ task.text }}
                                             </div>
                                             <div class="buttons">
                                                 <button class="btn btn-sm btn-danger">
